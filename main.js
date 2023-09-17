@@ -17,11 +17,11 @@ sr.reveal("#about-textp", { delay: 200 });
 
 sr.reveal(".title", { delay: 300 });
 sr.reveal(".card", { delay: 400 });
-// sr.reveal(".project", { delay: 400 });
+sr.reveal(".projects", { delay: 400 });
 sr.reveal(".image-item", { delay: 450 });
 sr.reveal("#toggleBtn", { delay: 300 });
-sr.reveal("#mail", { delay: 300 });
-sr.reveal("#mail-btn", { delay: 300 });
+// sr.reveal("#mail", { delay: 300 });
+// sr.reveal("#mail-btn", { delay: 300 });
 sr.reveal(".contact-form", { delay: 350 });
 sr.reveal(".contact-info", { delay: 350 });
 
