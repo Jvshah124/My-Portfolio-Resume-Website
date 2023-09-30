@@ -1,3 +1,8 @@
+function toggleNav() {
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("open");
+}
+
 const sr = ScrollReveal({
   origin: "top", // Animation starting point (you can use 'left', 'right', 'top', or 'bottom')
   distance: "75px", // Distance the element moves during the animation

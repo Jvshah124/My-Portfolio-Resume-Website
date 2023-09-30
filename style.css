@@ -47,6 +47,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   position: fixed; /* Fix the navbar at the top */
   top: 0;
   left: 0;
@@ -452,6 +453,7 @@ button:hover {
     center/cover; */
   /* width: 100%;
   padding: 80px 4%; */
+  width: 100%;
   padding: 50px 4%;
   /* height: 100vh; */
   display: flex;
@@ -462,11 +464,11 @@ button:hover {
 
 .img-slider {
   position: relative;
-  width: 910px;
+  width: 100%;
   height: 500px;
   margin: 10px;
   /* margin-bottom: 3rem; */
-  box-shadow: 0px 1px 15px var(--hover-color);
+  box-shadow: 0px 1px 7px var(--hover-color);
 }
 
 .img-slider .slide {
@@ -1226,16 +1228,30 @@ button:hover {
     bottom: 25px;
   }
 
-  .img-slider .navigation .btn {
-    /* width: 10px;
-height: 10px;
-margin: 8px; */
-  }
+
 }
 
 /* ---------------Responsivea at 768px--------------- */
 
 @media screen and (max-width: 768px) {
+  /* -----------Navbar------------ */
+
+  nav {
+    height: 50px;
+  }
+  .hero ul a {
+    padding: 0;
+    margin: 0.37rem 0.27rem;
+    font-size: 0.97rem;
+  }
+  .nav-btn {
+    padding: 8px 14px;
+
+    font-size: 0.97rem;
+  }
+
+  /* ------------Nav end-------------- */
+
   .content {
     top: 60%;
     left: 8%;
@@ -1439,4 +1455,411 @@ margin: 8px; */
   .copyright p {
     font-weight: 200;
   }
+}
+
+/* ---------------Responsivea at 620px--------------- */
+
+@media screen and (max-width: 620px) {
+  /* ---------------Nav-------------- */
+  nav {
+    justify-content: start;
+    flex-direction: column-reverse; /* Collapse to the right */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+  }
+
+  nav.open {
+    width: 130px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: none;
+  }
+
+
+  @media (max-width: 620px) {
+    .menu-icon {
+      display: block;
+    padding-bottom: 2rem;
+
+    }
+
+
+  .logo {
+    padding: 4px;
+    width: 55px;
+    margin-left: 0px;
+  }
+  .hero ul a {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    font-size: 0.87rem;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .content {
+    top: 55%;
+    left: 5%;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+    margin: 18px 0 26px;
+  }
+
+  .content h3 {
+    font-size: 2.11rem;
+  }
+
+  .content h4 {
+    font-size: 1.37rem;
+  }
+
+  .newsletter form {
+    width: 280px;
+  }
+
+  .newsletter form input:last-child {
+    padding: 4px 18px;
+    font-size: 1.15rem;
+    box-shadow: 0px 1px 11px var(--hover-color);
+    margin-left: 0px;
+    top: 2.5rem;
+    left: 0.1rem;
+  }
+
+  .newsletter form input:first-child {
+    width: 100%;
+    padding: 6px 100px 6px 8px;
+  }
+
+ 
+
+  /* ----------------About section --------------------- */
+  .about {
+    padding-top: 35px;
+  }
+  .about img {
+    width: 200px;
+  }
+  .about-text {
+    width: auto;
+  }
+
+  #about-textp {
+    font-size: 0.95rem;
+  }
+
+  .main {
+    max-width: 90%;
+  }
+
+
+  .about-text h2,
+  .skills .title h2,
+  .title h2 {
+    font-size: 2rem;
+    display: inline-block;
+ width: 100%;
+
+  }
+
+  .about-text h5 {
+    font-size: 1.13rem;
+  }
+  button {
+    padding: 11px 25px;
+    font-size: 1.13rem;
+  }
+
+  /* ---------------Skills---------------- */
+
+  .skills {
+    padding: 25px 6px;
+    padding-bottom: 70px;
+  }
+  .skills .box {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .skills .card i {
+    font-size: 1.87rem;
+  }
+
+  .skills .card h5 {
+    font-size: 1.13rem;
+    margin-bottom: 8px;
+  }
+
+  .card .button {
+    padding: 8px 10px;
+    font-size: 0.77rem;
+  }
+  #pra-text {
+    font-size: 1rem;
+  }
+
+  /* -----------SERVICES---------------------- */
+  .services {
+    padding: 25px 6px;
+    padding-bottom: 70px;
+  }
+  .box {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .card i {
+    font-size: 1.87rem;
+  }
+
+  .card h5 {
+    font-size: 1.13rem;
+    margin-bottom: 8px;
+  }
+
+  /* -----------PROJECTS-------------------------- */
+
+  .projects {
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
+
+  .img-slider {
+    width: 90%;
+    height: 300px;
+    margin: 10px;
+  }
+
+  .imag .img-slider .slide .info h2 {
+    font-size: 1.15rem;
+  }
+
+  /* -------------------GALLERY-------------------- */
+
+  .image-gallery {
+    padding: 25px 2%;
+    padding-bottom: 70px;
+  }
+  .main-gallery {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ------------My socials ------------------------ */
+
+  .social {
+    padding: 25px 4%;
+    padding-bottom: 70px;
+    min-height: 45vh;
+  }
+
+  .social-text {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .social-text i {
+    padding: 12px;
+    font-size: 1.25rem;
+  }
+
+  #toggleBtn {
+    padding: 8px 8px;
+  }
+
+  /* ------------------contact section----------------  */
+
+  .contact {
+    padding: 25px 2%;
+    padding-bottom: 45px;
+  }
+
+  .contact .title p {
+    font-size: 0.97rem;
+    line-height: 22px;
+  }
+
+  .ctc-container {
+    margin-top: 24px;
+  }
+  .ctc-container .contact-info {
+    width: 55%;
+  }
+  .ctc-container .contact-info .ctc-box {
+    padding: 14px 0;
+  }
+
+  .ctc-container .contact-info .ctc-box .ctc-icon {
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .ctc-container .contact-info .ctc-box .ctc-icon i {
+    font-size: 1.15rem;
+  }
+  .ctc-container .contact-info .ctc-box .ctc-text {
+    font-size: 0.87rem;
+    font-weight: 200;
+  }
+
+  .ctc-container .contact-info .ctc-box .ctc-text h3 {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.27rem;
+  }
+  .contact-form .input-box {
+    width: 95%;
+    margin-top: 5px;
+  }
+  .contact-form .input-box span {
+    padding: 4px 0;
+    margin: 6px 0;
+    font-size: 10px;
+  }
+
+  .contact-form .input-box input[type="submit"] {
+    width: 25%;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .copyright p {
+    font-weight: 100;
+  }
+}
+
+@media screen and (max-width: 490px) {
+
+  .content h1 {
+    font-size: 3.33rem;
+    margin: 28px 0 36px;
+  }
+  .content h3 {
+    font-size: 1.77rem;
+  }
+  .content h4 {
+    font-size: 1.27rem;
+  }
+
+    /* ----------------About section --------------------- */
+    .about {
+      padding-top: 25px;
+    }
+    .about img {
+      width: 170px;
+    }
+
+  
+    #about-textp {
+      font-size: 1rem;
+    }
+
+      /* ---------------Skills---------------- */
+
+  .skills {
+    padding: 25px 6px;
+    padding-bottom: 50px;
+  }
+  .skills .box {
+    max-width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 14px;
+  }
+
+  .skills .card i {
+    font-size: 1.97rem;
+    padding-bottom: 1rem;
+  }
+
+  .skills .card h5 {
+    font-size: 1.13rem;
+    margin-bottom: 0.87rem;
+  }
+  
+  .card .button {
+    font-size: 0.87rem;
+  }
+  #pra-text {
+    font-size: 1rem;
+    padding-bottom: 0.87rem;
+  }
+
+  /* -----------SERVICES---------------------- */
+  .services {
+    padding: 25px 6px;
+    padding-bottom: 50px;
+  }
+  .box {
+    max-width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 14px;
+  }
+
+  .card i {
+    font-size: 1.97rem;
+    padding-bottom: 1rem;
+  }
+
+  .card h5 {
+    font-size: 1.13rem;
+    margin-bottom: 0.87rem;
+  }
+
+  /* ------------------contact section----------------  */
+
+  .contact {
+    padding: 25px 2%;
+    padding-bottom: 35px;
+  }
+
+  .contact .title p {
+    font-size: 0.77rem;
+    line-height: 20px;
+  }
+
+  .ctc-container .contact-info {
+    width: 55%;
+  }
+
+  .ctc-container .contact-info .ctc-box {
+    padding: 14px 0;
+    flex-direction: column;
+
+  }
+
+  .ctc-container .contact-info .ctc-box .ctc-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  .ctc-container .contact-info .ctc-box .ctc-icon i {
+    font-size: 1.15rem;
+  }
+
 }
