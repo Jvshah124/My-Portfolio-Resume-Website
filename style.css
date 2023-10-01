@@ -455,6 +455,7 @@ button:hover {
   padding: 80px 4%; */
   width: 100%;
   padding: 50px 4%;
+  padding-bottom: 70px;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
@@ -465,7 +466,7 @@ button:hover {
 .img-slider {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 90vh;
   margin: 10px;
   /* margin-bottom: 3rem; */
   box-shadow: 0px 1px 7px var(--hover-color);
@@ -485,14 +486,17 @@ button:hover {
 }
 
 .img-slider .slide img {
+  object-fit: contain;
+
   z-index: 1;
   width: 100%;
+  height: 70vh;
   border-radius: 5px;
 }
 
 .img-slider .slide .info {
   position: absolute;
-  top: 90;
+  top: 10;
   right: 0;
   padding: 12px;
   background: rgba(0, 0, 0, 0.5);
@@ -1200,6 +1204,30 @@ button:hover {
     min-height: 350px;
   }
 
+  /* -----------PROJECTS-------------------------- */
+
+  .projects {
+    padding-top: 20px;
+  }
+
+  .img-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin: 10px;
+  }
+  .img-slider .slide {
+    width: 100%;
+    top: -70px;
+  }
+  .img-slider .slide img {
+    height: 70vh;
+  }
+
+  .img-slider .slide .info {
+    display: none;
+  }
+
   /* -----------------CONTACT----------------- */
   .contact {
     padding: 40px 4%;
@@ -1227,8 +1255,6 @@ button:hover {
   .img-slider .navigation {
     bottom: 25px;
   }
-
-
 }
 
 /* ---------------Responsivea at 768px--------------- */
@@ -1463,7 +1489,7 @@ button:hover {
   /* ---------------Nav-------------- */
   nav {
     justify-content: start;
-    flex-direction: column-reverse; /* Collapse to the right */
+    flex-direction: column-reverse;
     position: fixed;
     top: 0;
     right: 0;
@@ -1489,14 +1515,12 @@ button:hover {
     display: none;
   }
 
-
   @media (max-width: 620px) {
     .menu-icon {
       display: block;
-    padding-bottom: 2rem;
-
+      padding-bottom: 2rem;
     }
-
+  }
 
   .logo {
     padding: 4px;
@@ -1550,8 +1574,6 @@ button:hover {
     padding: 6px 100px 6px 8px;
   }
 
- 
-
   /* ----------------About section --------------------- */
   .about {
     padding-top: 35px;
@@ -1571,14 +1593,12 @@ button:hover {
     max-width: 90%;
   }
 
-
   .about-text h2,
   .skills .title h2,
   .title h2 {
     font-size: 2rem;
     display: inline-block;
- width: 100%;
-
+    width: 100%;
   }
 
   .about-text h5 {
@@ -1649,8 +1669,8 @@ button:hover {
     margin: 10px;
   }
 
-  .imag .img-slider .slide .info h2 {
-    font-size: 1.15rem;
+  .img-slider .slide {
+    top: -90px;
   }
 
   /* -------------------GALLERY-------------------- */
@@ -1752,8 +1772,9 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 490px) {
+/* --------------RESPONSIVE AT 490px---------------------- */
 
+@media screen and (max-width: 490px) {
   .content h1 {
     font-size: 3.33rem;
     margin: 28px 0 36px;
@@ -1765,20 +1786,19 @@ button:hover {
     font-size: 1.27rem;
   }
 
-    /* ----------------About section --------------------- */
-    .about {
-      padding-top: 25px;
-    }
-    .about img {
-      width: 170px;
-    }
+  /* ----------------About section --------------------- */
+  .about {
+    padding-top: 25px;
+  }
+  .about img {
+    width: 170px;
+  }
 
-  
-    #about-textp {
-      font-size: 1rem;
-    }
+  #about-textp {
+    font-size: 1rem;
+  }
 
-      /* ---------------Skills---------------- */
+  /* ---------------Skills---------------- */
 
   .skills {
     padding: 25px 6px;
@@ -1799,13 +1819,14 @@ button:hover {
     font-size: 1.13rem;
     margin-bottom: 0.87rem;
   }
-  
+
   .card .button {
     font-size: 0.87rem;
   }
+
   #pra-text {
     font-size: 1rem;
-    padding-bottom: 0.87rem;
+    padding-bottom: 0.17rem;
   }
 
   /* -----------SERVICES---------------------- */
@@ -1829,6 +1850,25 @@ button:hover {
     margin-bottom: 0.87rem;
   }
 
+  /* ----------------PROJECTS--------------- */
+
+  .projects {
+    width: 100%;
+    padding: 1px;
+    padding-bottom: 50px;
+  }
+
+  .img-slider {
+    height: 40vh;
+    width: 97%;
+    /* margin: 0px; */
+  }
+
+  .img-slider .slide {
+    width: 100%;
+    top: -111px;
+  }
+
   /* ------------------contact section----------------  */
 
   .contact {
@@ -1848,7 +1888,6 @@ button:hover {
   .ctc-container .contact-info .ctc-box {
     padding: 14px 0;
     flex-direction: column;
-
   }
 
   .ctc-container .contact-info .ctc-box .ctc-icon {
@@ -1862,4 +1901,9 @@ button:hover {
     font-size: 1.15rem;
   }
 
+  .contact-form .input-box input[type="submit"] {
+    width: 47%;
+    padding: 8px;
+    font-size: 14px;
+  }
 }

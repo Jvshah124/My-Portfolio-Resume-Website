@@ -30,7 +30,7 @@ sr.reveal("#toggleBtn", { delay: 300 });
 sr.reveal(".contact-form", { delay: 350 });
 sr.reveal(".contact-info", { delay: 350 });
 
-sr.reveal(".copyright p ", { delay: 250 });
+// sr.reveal(".copyright p ", { delay: 250 });
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   sr.reveal(""); // Trigger the animations when the page loads
