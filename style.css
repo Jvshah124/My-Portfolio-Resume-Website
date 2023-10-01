@@ -91,6 +91,7 @@ nav {
 .menu-icon i {
   font-size: 24px; /* Adjust the size as needed */
   color: white;
+  display: none;
 }
 
 .logo {
@@ -1544,6 +1545,11 @@ button:hover {
 
   nav ul {
     flex-direction: column;
+  }
+
+  .menu-icon i {
+    display: block;
+    padding-bottom: 0.5rem;
   }
 
   .logo {
