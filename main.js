@@ -17,10 +17,13 @@ window.addEventListener("scroll", () => {
 
 // ----------------SCROLL END----------------------------------
 
+// -----------------Collapsing navbar JS---------------------------
 function toggleNav() {
   var nav = document.querySelector("nav");
   nav.classList.toggle("open");
 }
+
+// ------------------------Collapsing end--------------------------
 
 const sr = ScrollReveal({
   origin: "top", // Animation starting point (you can use 'left', 'right', 'top', or 'bottom')

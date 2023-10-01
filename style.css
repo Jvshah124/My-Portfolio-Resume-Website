@@ -81,6 +81,17 @@ nav {
   z-index: 100; /* Ensure the navbar is on top of other content */
   /* padding: 45px 4% 0 4%; */
 }
+.menu-icon {
+  cursor: pointer;
+  padding: 6px;
+  background-color: ; /* Background color for the menu icon container */
+}
+
+/* Style for the hamburger icon */
+.menu-icon i {
+  font-size: 24px; /* Adjust the size as needed */
+  color: white;
+}
 
 .logo {
   padding: 6px;
@@ -1511,7 +1522,7 @@ button:hover {
 
 /* ---------------Responsivea at 620px--------------- */
 
-@media screen and (max-width: 620px) {
+@media (max-width: 620px) {
   /* ---------------Nav-------------- */
   nav {
     justify-content: start;
@@ -1520,32 +1531,19 @@ button:hover {
     top: 0;
     right: 0;
     height: 100%;
-    width: 0;
+    width: 130px;
     background-color: #333;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 10px;
+    padding-top: 60px;
   }
 
   nav.open {
     width: 130px;
-    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
-  }
-
-  .menu-icon {
-    cursor: pointer;
-    display: none;
-  }
-
-  @media (max-width: 620px) {
-    .menu-icon {
-      display: block;
-      padding-bottom: 2rem;
-    }
   }
 
   .logo {
@@ -1893,6 +1891,13 @@ button:hover {
   .img-slider .slide {
     width: 100%;
     top: -111px;
+  }
+
+  /* ---------------------SOCIALS---------------------- */
+
+  .social {
+    padding: 20px 4%;
+    min-height: 30vh;
   }
 
   /* ------------------contact section----------------  */
