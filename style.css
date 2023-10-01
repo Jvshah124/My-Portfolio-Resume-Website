@@ -30,6 +30,32 @@ body {
   background-color: #212121;
 }
 
+/* -----------------Scroll Animator------------------- */
+
+/* Set the initial state of the progress bar */
+.progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0; /* Start with width as 0 */
+  height: 5px;
+  background: #e93b32;
+  transform-origin: left;
+}
+
+/* Define the animation */
+@keyframes fillProgress {
+  to {
+    width: 100%; /* Fill to 100% width */
+  }
+}
+
+/* Apply the animation to the progress bar */
+/* .progress {
+  animation: fillProgress 3s linear;
+} */
+
+/* ----------Scroll End------------------------------------- */
 hr {
   border: 1px solid #f04e3c;
 }

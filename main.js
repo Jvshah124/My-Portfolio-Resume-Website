@@ -1,3 +1,22 @@
+// -------------Croll Animator JS----------------
+
+// Get the progress bar element
+const progressBar = document.querySelector(".progress");
+
+// Calculate the maximum scroll height (total page height - viewport height)
+const maxScrollHeight = document.body.scrollHeight - window.innerHeight;
+
+// Listen for the scroll event
+window.addEventListener("scroll", () => {
+  // Calculate the current scroll position as a percentage of the maximum scroll height
+  const scrollPercentage = (window.scrollY / maxScrollHeight) * 100;
+
+  // Update the width of the progress bar based on the scroll percentage
+  progressBar.style.width = scrollPercentage + "%";
+});
+
+// ----------------SCROLL END----------------------------------
+
 function toggleNav() {
   var nav = document.querySelector("nav");
   nav.classList.toggle("open");
